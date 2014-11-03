@@ -1,8 +1,9 @@
 {
-    "name": "elcweb/keyvaluestore-bundle",
+    "name": "elcweb/doctrine-encrypt-bundle",
     "type": "symfony-bundle",
-    "description": "Allows you to easily access and set key-value",
+    "description": "Package encrypts and decrypts Doctrine fields through life cycle events.",
     "license": "MIT",
+    "keywords": ["doctrine", "aes256", "encrypt", "decrypt"],
     "authors": [
         {
             "name": "Etienne Lachance",
@@ -11,11 +12,13 @@
     ],
     "require": {
         "php": ">=5.3.3",
-        "symfony/framework-bundle": ">=2.1,<3.0-dev"
+        "symfony/framework-bundle": ">=2.1,<3.0-dev",
+        "doctrine/orm": "~2.0",
+        "ext-mcrypt": "*"
     },
     "autoload": {
-        "psr-0": { "Elcweb\\KeyValueStoreBundle": "" }
+        "psr-0": { "Elcweb\\DoctrineEncryptBundle": "" }
     },
     "minimum-stability": "dev",
-    "target-dir": "Elcweb/KeyValueStoreBundle"
+    "target-dir": "Elcweb/DoctrineEncryptBundle"
 }
