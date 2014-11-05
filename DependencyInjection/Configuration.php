@@ -1,6 +1,6 @@
 <?php
 
-namespace Elcweb\DoctrineEncryptExtension\DependencyInjection;
+namespace Elcweb\DoctrineEncryptBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;

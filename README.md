@@ -12,7 +12,8 @@ Installation
 ```js
 {
     "require": {
-        "elcweb/doctrine-encrypt-bundle": "dev-master"
+        "51systems/doctrine-encrypt"         : "dev-master",
+        "elcweb/doctrine-encrypt-bundle"     : "dev-master"
     }
 }
 ```
@@ -20,6 +21,7 @@ Installation
 Now tell composer to download the bundle by running the command:
 
 ``` bash
+$ php composer.phar update 51systems/doctrine-encrypt
 $ php composer.phar update elcweb/doctrine-encrypt-bundle
 ```
 
