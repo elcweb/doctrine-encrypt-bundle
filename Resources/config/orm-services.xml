@@ -16,6 +16,6 @@
             <argument>%elcweb_doctrine_encrypt.secret_key%</argument>
             <tag name="doctrine.event_subscriber" />
         </service>
-        <service id="elcweb_doctrine_encrypt.subscriber" alias="elcwebdoctrine_encrypt.orm_subscriber" />
+        <service id="elcweb_doctrine_encrypt.subscriber" alias="elcweb_doctrine_encrypt.orm_subscriber" />
     </services>
 </container>
