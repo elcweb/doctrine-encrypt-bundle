@@ -12,8 +12,7 @@
         <!-- Encryption service(subscriber) for encrypt/decrypt entities properties -->    
         <service id="elcweb_doctrine_encrypt.orm_subscriber" class="%elcweb_doctrine_encrypt.orm_subscriber.class%" public="false">
             <argument type="service" id="annotation_reader" />
-            <argument>%elcweb_doctrine_encrypt.encryptor_class_name%</argument>
-            <argument>%elcweb_doctrine_encrypt.secret_key%</argument>
+            <argument type="service" id="elcweb_doctrine_encrypt.encryptor" />
             <tag name="doctrine.event_subscriber" />
         </service>
         <service id="elcweb_doctrine_encrypt.subscriber" alias="elcweb_doctrine_encrypt.orm_subscriber" />

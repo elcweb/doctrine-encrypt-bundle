@@ -49,6 +49,7 @@ class ElcwebDoctrineEncryptExtension extends Extension
         }
 
         $loader = new Loader\XmlFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));
+        $loader->load('services.xml');
         $loader->load(sprintf('%s.xml', $services[$config['db_driver']]));
     }
 }
