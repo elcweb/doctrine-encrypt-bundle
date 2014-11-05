@@ -2,7 +2,7 @@ DoctrineEncryptBundle
 =====================
 
 [![Latest Stable Version](https://poser.pugx.org/elcweb/doctrine-encrypt-bundle/v/stable.png)](https://packagist.org/packages/elcweb/doctrine-encrypt-bundle)
-[![Total Downloads](https://poser.pugx.org/elcweb/keyvaluestore-bundle/downloads.png)](https://packagist.org/packages/elcweb/doctrine-encrypt-bundle)
+[![Total Downloads](https://poser.pugx.org/elcweb/doctrine-encrypt-bundle/downloads.png)](https://packagist.org/packages/elcweb/doctrine-encrypt-bundle)
 
 Installation
 ------------
