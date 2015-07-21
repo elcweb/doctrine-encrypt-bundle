@@ -12,7 +12,7 @@ Installation
 ```js
 {
     "require": {
-        "51systems/doctrine-encrypt"         : "dev-master",
+        "51systems/doctrine-encrypt"         : "~4.0",
         "elcweb/doctrine-encrypt-bundle"     : "dev-master"
     }
 }
