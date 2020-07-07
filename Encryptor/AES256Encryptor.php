@@ -47,7 +47,7 @@ class AES256Encryptor implements EncryptorInterface
             )
         );
         sodium_memzero($data);
-        sodium_memzero($this->key);
+        sodium_memzero($this->secretKey);
 
         return trim($cipher);
     }
@@ -60,6 +60,9 @@ class AES256Encryptor implements EncryptorInterface
      */
     public function decrypt($data)
     {
+        if (null === $data) return null;
+        if ('' === $data) return '';
+
         $decoded = base64_decode($data);
         if ($decoded === false) {
             throw new Exception('Scream bloody murder, the encoding failed');
@@ -68,18 +71,18 @@ class AES256Encryptor implements EncryptorInterface
             throw new Exception('Scream bloody murder, the message was truncated');
         }
         $nonce = mb_substr($decoded, 0, SODIUM_CRYPTO_SECRETBOX_NONCEBYTES, '8bit');
-        $ciphertext = mb_substr($decoded, SODIUM_CRYPTO_SECRETBOX_NONCEBYTES, null, '8bit');
+        $cipherText = mb_substr($decoded, SODIUM_CRYPTO_SECRETBOX_NONCEBYTES, null, '8bit');
 
         $plain = sodium_crypto_secretbox_open(
-            $ciphertext,
+            $cipherText,
             $nonce,
             $this->secretKey
         );
         if ($plain === false) {
             throw new Exception('the message was tampered with in transit');
         }
-        sodium_memzero($ciphertext);
-        sodium_memzero($key);
+        sodium_memzero($cipherText);
+        sodium_memzero($this->secretKey);
 
         return $plain;
     }
