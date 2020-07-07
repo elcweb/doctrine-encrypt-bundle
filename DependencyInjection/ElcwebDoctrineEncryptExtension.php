@@ -24,7 +24,7 @@ class ElcwebDoctrineEncryptExtension extends Extension
 
         $services = array('orm' => 'orm-services');
         $supportedEncryptorClasses = array(
-            'aes256' => 'DoctrineEncrypt\Encryptors\AES256Encryptor'
+            'aes256' => 'Elcweb\DoctrineEncryptBundle\Encryptor\AES256Encryptor'
         );
 
         if (empty($config['secret_key'])) {

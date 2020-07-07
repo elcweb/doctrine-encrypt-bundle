@@ -11,9 +11,10 @@
         }
     ],
     "require": {
-        "php": ">=5.3.3",
+        "php": "^7.2",
+        "ext-sodium": "*",
         "symfony/framework-bundle": ">=4.4",
-        "doctrine/orm": "~2.7",
+        "doctrine/orm": "^2.5",
         "51systems/doctrine-encrypt": "~6.0"
     },
     "autoload": {

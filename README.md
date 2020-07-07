@@ -9,7 +9,7 @@ Installation
 
 ### Step 1: Download using composer
 
-```js
+```json
 {
     "require": {
         "51systems/doctrine-encrypt"         : "*",
@@ -31,15 +31,19 @@ Enable the bundle in the kernel:
 
 ``` php
 <?php
-// app/AppKernel.php
+// config/bundles.php
 
-public function registerBundles()
-{
-    $bundles = array(
-        // ...
-        new Elcweb\DoctrineEncryptBundle\ElcwebDoctrineEncryptBundle(),
-    );
-}
+return [
+    // ...
+    Elcweb\DoctrineEncryptBundle\ElcwebDoctrineEncryptBundle::class => ['all' => true],
+];
+```
+
+### Step 3: Set secret
+``` yaml
+# config/packages/doctrine_encryption.yaml
+elcweb_doctrine_encrypt:
+  secret_key: SOME_STRING
 ```
 
 License
